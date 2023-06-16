@@ -1,0 +1,1324 @@
+@charset "UTF-8";
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ **/
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/**
+ * 1. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ **/
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * 1. Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+ **/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+/**
+ * 1. Change the font styles in all browsers. 
+ **/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * 1. Remove the inner border and padding in Firefox.
+ **/
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ **/
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+:root {
+  --bp-mobile: 576px;
+  --bp-tablet: 768px;
+  --bp-desktop: 1200px;
+}
+
+:root {
+  --red-50: #fff0f1;
+  --red-100: #ffddde;
+  --red-200: #ffc0c2;
+  --red-300: #ff9498;
+  --red-400: #ff575d;
+  --red-500: #ff232b;
+  --red-600: #f40009;
+  --red-700: #d70008;
+  --red-800: #b10309;
+  --red-900: #920a0f;
+  --red-950: #500003;
+  --red: #f40009;
+  --orange-50: #fff8ec;
+  --orange-100: #fff0d3;
+  --orange-200: #ffdea5;
+  --orange-300: #ffc56d;
+  --orange-400: #ffa032;
+  --orange-500: #ff830a;
+  --orange-600: #ff6a00;
+  --orange-700: #cc4c02;
+  --orange-800: #a13b0b;
+  --orange-900: #82330c;
+  --orange: #ff6a00;
+  --yellow-50: #fefce8;
+  --yellow-100: #fff9c2;
+  --yellow-200: #fff187;
+  --yellow-300: #ffe143;
+  --yellow-400: #ffcd11;
+  --yellow-500: #efb403;
+  --yellow-600: #ce8a00;
+  --yellow-700: #a46204;
+  --yellow-800: #884c0b;
+  --yellow-900: #733e10;
+  --yellow: #ffcd11;
+  --green-50: #f9ffe5;
+  --green-100: #f0ffc7;
+  --green-200: #e0ff95;
+  --green-300: #c9fe58;
+  --green-400: #b2f526;
+  --green-500: #92dc06;
+  --green-600: #76b900;
+  --green-700: #548506;
+  --green-800: #45690b;
+  --green-900: #3a580f;
+  --green: #76b900;
+  --lime-50: #effef5;
+  --lime-100: #d8ffea;
+  --lime-200: #b4fed6;
+  --lime-300: #7afbb7;
+  --lime-400: #3aee90;
+  --lime-500: #10d76f;
+  --lime-600: #07c160;
+  --lime-700: #098c48;
+  --lime-800: #0d6e3d;
+  --lime-900: #0d5a34;
+  --lime: #07c160;
+  --cyan-50: #effefd;
+  --cyan-100: #c7fffb;
+  --cyan-200: #90fff7;
+  --cyan-300: #51f7f2;
+  --cyan-400: #1de4e4;
+  --cyan-500: #04c5c8;
+  --cyan-600: #00979d;
+  --cyan-700: #057a80;
+  --cyan-800: #0a5f65;
+  --cyan-900: #0d5054;
+  --cyan: #00979d;
+  --blue-50: #eef8ff;
+  --blue-100: #daefff;
+  --blue-200: #bde3ff;
+  --blue-300: #8fd3ff;
+  --blue-400: #5ab8ff;
+  --blue-500: #3499fd;
+  --blue-600: #1877f2;
+  --blue-700: #1664df;
+  --blue-800: #1950b4;
+  --blue-900: #1a468e;
+  --blue: #1877f2;
+  --purple-50: #f3f1fc;
+  --purple-100: #e7e5fa;
+  --purple-200: #d5d0f5;
+  --purple-300: #bcb3ee;
+  --purple-400: #a694e5;
+  --purple-500: #977ada;
+  --purple-600: #8960cb;
+  --purple-700: #7952b3;
+  --purple-800: #614390;
+  --purple-900: #503c73;
+  --purple: #7952b3;
+  --pink-50: #fff0f9;
+  --pink-100: #ffe4f4;
+  --pink-200: #ffc9eb;
+  --pink-300: #ff9cda;
+  --pink-400: #ff5fbe;
+  --pink-500: #ff30a3;
+  --pink-600: #f50d7f;
+  --pink-700: #df0067;
+  --pink-800: #b00451;
+  --pink-900: #920946;
+  --pink: #df0067;
+  --black-50: #f7f7f7;
+  --black-100: #e3e3e3;
+  --black-200: #c8c8c8;
+  --black-300: #a4a4a4;
+  --black-400: #818181;
+  --black-500: #666666;
+  --black-600: #515151;
+  --black-700: #434343;
+  --black-800: #383838;
+  --black-900: #000000;
+  --black: #000000;
+  --grey-50: #f7f7f7;
+  --grey-100: #f0f0f0;
+  --grey-200: #e4e4e4;
+  --grey-300: #d1d1d1;
+  --grey-400: #b4b4b4;
+  --grey-500: #9a9a9a;
+  --grey-600: #818181;
+  --grey-700: #6a6a6a;
+  --grey-800: #5a5a5a;
+  --grey-900: #4e4e4e;
+  --grey: #818181;
+}
+
+/* Regular */
+@font-face {
+  font-family: garamond;
+  src: url("../../assets/fonts/garamond/garamond-regular.ttf");
+  font-weight: 100 400;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Regular italic */
+@font-face {
+  font-family: garamond;
+  src: url("../../assets/fonts/garamond/garamond-italic.ttf");
+  font-weight: 100 400;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Medium */
+@font-face {
+  font-family: garamond;
+  src: url("../../assets/fonts/garamond/garamond-medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Medium italic */
+@font-face {
+  font-family: garamond;
+  src: url("../../assets/fonts/garamond/garamond-medium-italic.ttf");
+  font-weight: 500;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Semi-bold */
+@font-face {
+  font-family: garamond;
+  src: url("../../assets/fonts/garamond/garamond-semi-bold.ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Semi-bold italic */
+@font-face {
+  font-family: garamond;
+  src: url("../../assets/fonts/garamond/garamond-semi-bold-italic.ttf");
+  font-weight: 600;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Bold */
+@font-face {
+  font-family: garamond;
+  src: url("../../assets/fonts/garamond/garamond-bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Bold italic */
+@font-face {
+  font-family: garamond;
+  src: url("../../assets/fonts/garamond/garamond-bold-italic.ttf");
+  font-weight: 700;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Extra-bold */
+@font-face {
+  font-family: garamond;
+  src: url("../../assets/fonts/garamond/garamond-extra-bold.ttf");
+  font-weight: 800 900;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Extra-bold italic */
+@font-face {
+  font-family: garamond;
+  src: url("../../assets/fonts/garamond/garamond-extra-bold-italic.ttf");
+  font-weight: 800 900;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Regular */
+@font-face {
+  font-family: bodoni;
+  src: url("../../assets/fonts/bodoni/bodoni-regular.ttf");
+  font-weight: 100 400;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Regular italic */
+@font-face {
+  font-family: bodoni;
+  src: url("../../assets/fonts/bodoni/bodoni-italic.ttf");
+  font-weight: 100 400;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Medium */
+@font-face {
+  font-family: bodoni;
+  src: url("../../assets/fonts/bodoni/bodoni-medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Medium italic */
+@font-face {
+  font-family: bodoni;
+  src: url("../../assets/fonts/bodoni/bodoni-medium-italic.ttf");
+  font-weight: 500;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Semi-bold */
+@font-face {
+  font-family: bodoni;
+  src: url("../../assets/fonts/bodoni/bodoni-semi-bold.ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Semi-bold italic */
+@font-face {
+  font-family: bodoni;
+  src: url("../../assets/fonts/bodoni/bodoni-semi-bold-italic.ttf");
+  font-weight: 600;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Bold */
+@font-face {
+  font-family: bodoni;
+  src: url("../../assets/fonts/bodoni/bodoni-bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Bold italic */
+@font-face {
+  font-family: bodoni;
+  src: url("../../assets/fonts/bodoni/bodoni-bold-italic.ttf");
+  font-weight: 700;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Extra-bold */
+@font-face {
+  font-family: bodoni;
+  src: url("../../assets/fonts/bodoni/bodoni-extra-bold.ttf");
+  font-weight: 800;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Extra-bold italic */
+@font-face {
+  font-family: bodoni;
+  src: url("../../assets/fonts/bodoni/bodoni-extra-bold-italic.ttf");
+  font-weight: 800;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Black */
+@font-face {
+  font-family: bodoni;
+  src: url("../../assets/fonts/bodoni/bodoni-black.ttf");
+  font-weight: 900;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Black italic */
+@font-face {
+  font-family: bodoni;
+  src: url("../../assets/fonts/bodoni/bodoni-black-italic.ttf");
+  font-weight: 900;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Regular */
+@font-face {
+  font-family: century_expanded;
+  src: url("../../assets/fonts/century_expanded/century_expanded-regular.otf");
+  font-weight: 100 400;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Regular italic */
+@font-face {
+  font-family: century_expanded;
+  src: url("../../assets/fonts/century_expanded/century_expanded-italic.otf");
+  font-weight: 100 400;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Medium */
+@font-face {
+  font-family: century_expanded;
+  src: url("../../assets/fonts/century_expanded/century_expanded-medium.otf");
+  font-weight: 500;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Bold */
+@font-face {
+  font-family: century_expanded;
+  src: url("../../assets/fonts/century_expanded/century_expanded-bold.otf");
+  font-weight: 600 900;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Bold italic */
+@font-face {
+  font-family: century_expanded;
+  src: url("../../assets/fonts/century_expanded/century_expanded-bold-italic.otf");
+  font-weight: 600 900;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Regular */
+@font-face {
+  font-family: futura;
+  src: url("../../assets/fonts/futura/futura-regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Light */
+@font-face {
+  font-family: futura;
+  src: url("../../assets/fonts/futura/futura-light.ttf");
+  font-weight: 100 300;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Light italic */
+@font-face {
+  font-family: futura;
+  src: url("../../assets/fonts/futura/futura-light-italic.ttf");
+  font-weight: 100 300;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Medium italic */
+@font-face {
+  font-family: futura;
+  src: url("../../assets/fonts/futura/futura-medium-italic.ttf");
+  font-weight: 500;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Bold */
+@font-face {
+  font-family: futura;
+  src: url("../../assets/fonts/futura/futura-bold.ttf");
+  font-weight: 600 900;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Bold italic */
+@font-face {
+  font-family: futura;
+  src: url("../../assets/fonts/futura/futura-bold-italic.ttf");
+  font-weight: 600 900;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Regular */
+@font-face {
+  font-family: times_new_roman;
+  src: url("../../assets/fonts/times_new_roman/times_new_roman-regular.ttf");
+  font-weight: 100 400;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Regular italic */
+@font-face {
+  font-family: times_new_roman;
+  src: url("../../assets/fonts/times_new_roman/times_new_roman-italic.ttf");
+  font-weight: 100 400;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Bold */
+@font-face {
+  font-family: times_new_roman;
+  src: url("../../assets/fonts/times_new_roman/times_new_roman-bold.ttf");
+  font-weight: 500 900;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Bold italic */
+@font-face {
+  font-family: times_new_roman;
+  src: url("../../assets/fonts/times_new_roman/times_new_roman-bold-italic.ttf");
+  font-weight: 500 900;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Regular */
+@font-face {
+  font-family: helvetica;
+  src: url("../../assets/fonts/helvetica/helvetica_lt_regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Regular italic */
+@font-face {
+  font-family: helvetica;
+  src: url("../../assets/fonts/helvetica/helvetica_lt-italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Light */
+@font-face {
+  font-family: helvetica;
+  src: url("../../assets/fonts/helvetica/helvetica_lt_regular.ttf");
+  font-weight: 100 300;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Light italic */
+@font-face {
+  font-family: helvetica;
+  src: url("../../assets/fonts/helvetica/helvetica_lt-italic.ttf");
+  font-weight: 100 300;
+  font-style: italic;
+  font-variant: normal;
+}
+/* Bold */
+@font-face {
+  font-family: helvetica;
+  src: url("../../assets/fonts/helvetica/helvetica_lt-bold.ttf");
+  font-weight: 500 900;
+  font-style: normal;
+  font-variant: normal;
+}
+/* Bold italic */
+@font-face {
+  font-family: helvetica;
+  src: url("../../assets/fonts/helvetica/helvetica_lt-bold-italic.ttf");
+  font-weight: 500 900;
+  font-style: italic;
+  font-variant: normal;
+}
+:root {
+  --xxsm: 4px;
+  --xsm: 8px;
+  --sm: 12px;
+  --md: 24px;
+  --big: 32px;
+  --lg: 48px;
+  --huge: 64px;
+  --xhuge: 96px;
+  --xxhuge: 192px;
+  --bpercent: 8.33333%;
+}
+
+:root {
+  --fs-extra-large: 52px;
+  --lh-extra-large: 56px;
+  --fs-large: 44px;
+  --lh-large: 48px;
+  --fs-h1: 40px;
+  --lh-h1: 48px;
+  --fs-h2: 36px;
+  --lh-h2: 44px;
+  --fs-h3: 32px;
+  --lh-h3: 40px;
+  --fs-h4: 28px;
+  --lh-h4: 36px;
+  --fs-h5: 24px;
+  --lh-h5: 32px;
+  --fs-h6: 20px;
+  --lh-h6: 28px;
+  --fs-p1: 18px;
+  --lh-p1: 28px;
+  --fs-p2: 16px;
+  --lh-p2: 24px;
+  --fs-p3: 14px;
+  --lh-p3: 20px;
+  --fs-small: 10px;
+  --lh-small: 16px;
+}
+
+/* untouch */
+/* untouch */
+/* untouch */
+/* untouch */
+/* untouch */
+/* untouch */
+/* untouch */
+/* untouch */
+/* untouch */
+/* untouch */
+/* untouch */
+/* untouch */
+/* untouch */
+* {
+  font-size: var(--fs-p3);
+  line-height: var(--lh-p3);
+  color: var(--black-800);
+  font-family: "garamond", sans-serif;
+}
+
+a {
+  color: var(--black-700);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--black-500);
+}
+
+abbr {
+  color: var(--black-700);
+  font-style: italic;
+}
+
+address {
+  color: var(--black-700);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* untouch */
+/* untouch */
+/* untouch */
+/* untouch */
+b {
+  font-weight: 800;
+}
+
+/* untouch */
+/* untouch */
+/* untouch */
+blockquote {
+  background-color: var(--grey-200);
+  margin: var(--xsm) 0;
+  padding: var(--xsm);
+  border-left: 2px solid var(--grey-900);
+  font-style: italic;
+}
+
+body {
+  cursor: crosshair;
+}
+
+/* untouch */
+button {
+  color: var(--grey-50);
+  background-color: var(--grey-900);
+  border: 0;
+  padding: var(--xsm);
+  transition: 300ms;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--grey-200);
+  color: var(--grey-900);
+}
+
+/* untouch */
+caption {
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+  caption-side: bottom;
+}
+
+cite {
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+}
+
+code {
+  background-color: var(--grey-100);
+  padding: var(--xxsm);
+}
+
+/* untouch */
+/* untouch */
+/* + deprecated + */
+/* untouch */
+dd {
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+}
+
+/* untouch */
+details {
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+  border: 1px solid var(--grey-400);
+  padding: var(--xsm);
+}
+
+/* untouch */
+/* untouch */
+/* untouch */
+dt {
+  font-weight: 800;
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+}
+
+/* untouch */
+/* untouch */
+/* untouch */
+figcaption {
+  background-color: var(--grey-100);
+  padding: var(--xxsm);
+  text-align: right;
+  font-style: italic;
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  max-width: 256px;
+  padding: var(--xxsm);
+  border: 1px solid var(--grey-400);
+}
+
+figure > img {
+  width: 100%;
+}
+
+/* untouch */
+/* untouch */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+  line-height: var(--lh-h4);
+}
+
+h5 {
+  font-size: var(--fs-h5);
+  line-height: var(--lh-h5);
+}
+
+h6 {
+  font-size: var(--fs-h6);
+  line-height: var(--lh-h6);
+}
+
+/* untouch */
+/* untouch */
+hr {
+  height: 2px;
+  background-color: var(--grey-900);
+  border: 0;
+}
+
+/* untouch */
+/* untouch */
+iframe {
+  width: 100%;
+  border: 0;
+}
+
+/* untouch */
+input {
+  border: 0;
+  color: var(--grey-50);
+  background-color: var(--grey-900);
+  padding: var(--xsm);
+  transition: 300ms;
+  outline: 0;
+  font-size: var(--fs-p3);
+  line-height: var(--lh-p3);
+}
+
+input:hover {
+  background-color: var(--black-600);
+  color: var(--grey-50);
+}
+
+/* untouch */
+/* + deprecated + */
+kbd {
+  padding: var(--xxsm);
+  white-space: nowrap;
+  background-color: var(--grey-200);
+  border-radius: 3px;
+  box-shadow: 0 1px 1px var(--black-200), 0 2px 0 0 var(--grey-100) inset;
+  font-weight: 800;
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+}
+
+label {
+  display: inline-block;
+  padding: var(--xsm);
+  background-color: var(--grey-200);
+}
+
+/* untouch */
+/* untouch */
+/* untouch */
+/* untouch */
+/* untouch */
+mark {
+  background-color: var(--grey-200);
+  padding: 0 var(--xxsm);
+}
+
+/* untouch */
+/* untouch */
+meter {
+  /* The gray background in Firefox */
+  background: var(--grey-200);
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+/* The gray background in Chrome, etc. */
+meter::-webkit-meter-bar {
+  background: var(--grey-200);
+}
+
+/* The green (optimum) bar in Firefox */
+meter:-moz-meter-optimum::-moz-meter-bar {
+  background: var(--green);
+}
+
+/* The green (optimum) bar in Chrome etc. */
+meter::-webkit-meter-optimum-value {
+  background: var(--green);
+}
+
+/* The yellow (sub-optimum) bar in Firefox */
+meter:-moz-meter-sub-optimum::-moz-meter-bar {
+  background: var(--yellow);
+}
+
+/* The yellow (sub-optimum) bar in Chrome etc. */
+meter::-webkit-meter-suboptimum-value {
+  background: var(--yellow);
+}
+
+/* The red (even less good) bar in Firefox */
+meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+  background: var(--red);
+}
+
+/* The red (even less good) bar in Chrome etc. */
+meter::-webkit-meter-even-less-good-value {
+  background: var(--red);
+}
+
+/* untouch */
+/* untouch */
+/* untouch */
+ol {
+  padding-left: var(--md);
+}
+
+/* untouch */
+/* untouch */
+/* untouch */
+p {
+  margin: var(--xsm) 0;
+  padding: 0;
+}
+
+/* untouch */
+pre {
+  overflow: auto;
+  margin: var(--xsm) 0;
+  padding: var(--xsm);
+  background-color: var(--grey-900);
+  color: var(--grey-50);
+  font-family: monospace;
+}
+
+progress {
+  background: var(--grey-200);
+  border: 0;
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--blue);
+}
+
+q {
+  background-color: var(--grey-200);
+  font-style: italic;
+}
+
+/* untouch */
+/* untouch */
+/* untouch */
+/* untouch */
+samp {
+  font-family: monospace;
+  display: block;
+  padding: var(--xxsm);
+  border: 1px solid var(--grey-400);
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+}
+
+/* untouch */
+/* untouch */
+select {
+  color: var(--grey-50);
+  background-color: var(--grey-900);
+  padding: var(--xsm);
+  border: 0;
+  outline: 0;
+  font-size: var(--fs-p3);
+  line-height: var(--lh-p3);
+}
+
+small {
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+}
+
+/* untouch */
+/* untouch */
+strong {
+  font-weight: 800;
+}
+
+/* untouch */
+/* untouch */
+summary {
+  font-weight: 800;
+}
+
+/* untouch */
+table {
+  border-collapse: collapse;
+}
+
+/* untouch */
+td {
+  border: 1px solid var(--grey-800);
+  padding: var(--xsm);
+}
+
+textarea {
+  color: var(--grey-50);
+  background-color: var(--grey-900);
+  padding: var(--xsm);
+  border: 0;
+  outline: 0;
+  font-size: var(--fs-p3);
+  line-height: var(--lh-p3);
+}
+
+/* untouch */
+th {
+  border: 1px solid var(--grey-800);
+  padding: var(--xsm);
+  color: var(--grey-50);
+  background-color: var(--grey-900);
+}
+
+/* untouch */
+/* untouch */
+/* untouch */
+/* untouch */
+tr:nth-child(2n) td {
+  background-color: var(--grey-200);
+}
+
+/* untouch */
+ul {
+  padding-left: var(--md);
+}
+
+var {
+  padding: var(--xxsm);
+  white-space: nowrap;
+  background-color: var(--grey-200);
+  border-radius: 0px !important;
+  box-shadow: 0 1px 1px var(--black-200);
+  font-weight: 800;
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+}
+
+/* untouch */
+/* untouch */
+.flex, header.header .profile, .container main.main, .container header.header, .container nav.navigation.second ul li, .container nav.navigation, .column, .container footer.footer, .container nav.navigation.second ul, .container nav.navigation.second, .container {
+  display: flex;
+}
+
+.pad, header.header .profile, .container footer.footer, .container nav.navigation {
+  padding: var(--sm);
+}
+
+.marge {
+  margin: var(--sm);
+}
+
+.gap, header.header .profile, .container nav.navigation {
+  row-gap: var(--sm);
+  column-gap: var(--sm);
+}
+
+.column, .container footer.footer, .container nav.navigation.second ul, .container nav.navigation.second, .container {
+  flex-direction: column;
+}
+
+.container nav.navigation.breadcrumb {
+  padding: var(--xsm) var(--sm);
+}
+.container nav.navigation.second {
+  width: calc(196px - 2 * var(--md));
+  row-gap: 0;
+  column-gap: 0;
+  overflow: auto;
+  padding: var(--md);
+}
+.container nav.navigation.second ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.container nav.navigation.second ul li:first-child {
+  font-weight: 800;
+}
+.container footer.footer {
+  min-height: 68px;
+  justify-content: center;
+  padding-left: var(--lg);
+  padding-right: var(--lg);
+}
+.container main.main {
+  height: calc(100vh - 80px);
+}
+.container main.main > section {
+  width: calc(100% - 196px);
+  flex-grow: 1;
+  height: calc(100vh - 80px - 2 * var(--md));
+  padding: var(--md);
+  overflow: auto;
+}
+
+nav.navigation.main a {
+  line-height: var(--md);
+}
+
+nav.navigation.second ul li a {
+  display: block;
+  padding: var(--xsm) var(--sm);
+  border-left: 1px solid var(--grey-800);
+  width: 100%;
+}
+nav.navigation.second ul li a:hover {
+  color: var(--black);
+  border-left: 1px solid var(--black);
+}
+
+nav.navigation.breadcrumb a {
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+}
+nav.navigation.breadcrumb a::before {
+  content: "ᐅ";
+  margin-right: var(--sm);
+}
+nav.navigation.breadcrumb a:first-child::before {
+  content: none;
+}
+
+header.header .profile {
+  margin-left: auto;
+}
+header.header .profile img.logo {
+  width: var(--md);
+  height: var(--md);
+}
+header.header .profile p {
+  margin: 0;
+  padding: 0;
+  line-height: var(--md);
+}
+
+main.main > section {
+  background-color: var(--grey-100);
+}
+
+@media only screen and (max-width: 576px) {
+  nav.navigation.main a {
+    display: none;
+  }
+  main.main {
+    flex-direction: column;
+    height: auto !important;
+  }
+  main.main > nav.navigation.second, main.main > section {
+    flex-grow: 1;
+    width: auto !important;
+  }
+  main.main, main.main > section {
+    height: auto !important;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 576px) {
+  nav.navigation.main a:not(:first-child) {
+    display: none;
+  }
+}
+nav.navigation.main a.active {
+  text-decoration: underline;
+}
+
+nav.navigation.second ul.close li:not(:first-child) {
+  display: none;
+}
+nav.navigation.second ul.open li a {
+  color: var(--grey-800);
+  border-left: 1px solid var(--grey-500);
+}
+nav.navigation.second ul.open li a:hover {
+  color: var(--black);
+  border-left: 1px solid var(--black);
+}
+
+body.debug::before {
+  visibility: visible !important;
+}
+
+@media only screen and (max-width: 576px) {
+  body::before {
+    content: "mobile";
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    padding: var(--sm);
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 576px) {
+  body::before {
+    content: "tablet";
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    padding: var(--sm);
+    visibility: hidden;
+  }
+
+  nav.navigation.main a:first-child {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body::before {
+    content: "desktop";
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    padding: var(--sm);
+    visibility: hidden;
+  }
+}
+
+/*# sourceMappingURL=theme.css.map */

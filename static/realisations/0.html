@@ -1,0 +1,122 @@
+<h1>MyMRS</h1>
+
+<p>
+    Lors de mon expérience en alternance, j'ai eu l'opportunité de travailler sur divers projets,
+    mais c'est bien la refactorisation des applications mobiles de deux clients de mon entreprise qui m'ont le plus épanoui.
+    Parmi ces clients, <a target="_blank" href="https://www.mymrs.fr/">MyMRS</a> abréviation de Multi Restauration Services, est une entreprise spécialisée dans la restauration premium et écoresponsable en entreprise. 
+</p>
+
+<p>
+    Mon équipe était chargée de maintenir leur application depuis plus de deux ans.
+    Cette application permet aux utilisateurs de consulter le calendrier des repas à venir,
+    de créer un compte forfaitaire pour suivre leurs dépenses dans les cantines et restaurants MyMRS,
+    et offre une expérience complète de service de restauration, de la commande jusqu'au paiement. 
+</p>
+
+<p>
+    Durant tout le projet, j'ai travaillé en étroite collaboration avec mon chef de projet, Julien qui lui même échangeait avec la cliente et un de ces conseiller.
+</p>
+
+<h3>Contexte</h3> 
+
+<p>
+    L'un des principaux défis auxquels nous avons été confrontés était que la version du Framework Ionic que nous utilisions n'était plus maintenue,
+    ce qui empêchait le déploiement de nouvelles versions. Notre tentative de migration vers une version plus récente a entraîné de nombreux problèmes liés au code existant.
+    Nous avons donc décidé de repartir sur une nouvelle architecture, afin de remettre à niveau nos outils.
+    De plus, nous étions soumis à une date limite imposée par Google pour mettre à jour la version du SDK Android utilisée pour construire l'application. 
+</p>
+
+<p>
+    Les principaux risques auxquels nous avons fait face étaient la date limite imposée par Google,
+    qui exigeait une refonte complète de l’ensemble de l’application (pages, services, composants et extensions).
+    Le deuxième risque majeur était le manque de documentation de l'API exploité par notre application.
+</p>
+
+<p>
+    Notre objectif principal était donc de refactoriser le code d'Ionic 2.0 vers Ionic 6.0,
+    tout en y ajoutant des bonnes pratiques de code telles que l'internationalisation du texte (standard <a target="_blank" href="https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n">I18N</a>),
+    la scalabilité du style (<a target="_blank" href="https://smacss.com/">SMACSS</a>), le typage strict avec (<a target="_blank" href="https://www.typescriptlang.org/">TypeScript</a>), et enfin
+    l’ajout des nouvelles fonctionnalités comme de scan de QR Code et un “Click-and-Collect". 
+</p>
+
+
+<h3>«The Beginning»</h3>
+
+<p>
+    À la demande de mon supérieur, j'ai commencé par créer un nouveau projet en réutilisant les Frameworks <a target="_blank" href="https://angular.io/">Angular</a> et <a target="_blank" href="https://ionicframework.com/">Ionic</a>.
+</p>
+
+<p>
+    J'ai dû configurer les services et les outils de base tels que l'internationalisation, le routage, la gestion de la version de l'application,
+    l'écran de démarrage, le numéro d'appel, la barre d'état, le scanner de codes-barres, le compositeur d'e-mails, et le navigateur d'applications externes.
+    J'ai également récupéré les configurations nécessaires pour signer et compiler les applications sur les différentes plateformes (AppStore et PlayStore). 
+</p>
+
+<p>
+    Une fois ces étapes terminées, nous avons entamé les sprints de développement, dans l'ordre suivant :
+</p>
+
+<ol>
+    <li>Tutoriel : Onboarding de l'utilisateur</li>
+    <li>Barre latérale de navigation</li>
+    <li>Page de connexion et de réinitialisation du mot de passe</li>
+    <li>Page de choix du restaurant et d'inscription d'un nouvel utilisateur</li>
+    <li>Page d'accueil contenant le menu hebdomadaire du restaurant de l'utilisateur</li>
+    <li>Pages spécifiques au type de restaurant comme par exemple les actualités</li>
+    <li>Pages spécifiques de l'utilisateur comme par exemple les paramètres ou encore le profile</li>
+</ol>
+
+
+<p>
+    J'étais responsable du développement et des tests de la partie Android, tandis que mon supérieur s'occupait des tests sur iOS (Apple) avant de soumettre l'application au conseiller du
+    client pour une validation minutieuse de ces fonctionnalités. Ce processus nous a permis de garder un œil sur d’éventuelles régressions.
+</p> 
+
+<h3>Ionic</h3>
+
+<p>
+    Jusqu'à présent, je vous ai parlé du projet sans mentionner Ionic, mais il est essentiel de souligner que ce Framework a été d'une grande utilité pour le développement de l'application.
+</p>
+
+<p>
+    Pourquoi ?
+</p>
+
+<p>
+    Toutes les fonctionnalités natives du téléphone sont accessibles via des plugins ou des API Javascript entièrement gratuits.
+    De plus, la documentation d'Ionic est claire, bien que parfois incomplète (en particulier pour les Shadow-DOMs 😉).
+    Enfin tout ce qui n'est pas pris en charge nativement par Ionic peut être remplacé par des composants ou des services Angular, qui bénéficient également d'une communauté très active. 
+</p>
+
+
+<p>
+    Après la réalisation de ce projet, j'ai eu l'opportunité de participer au Summit Ionic.
+    Le sujet abordé y était passionnant, portant sur la notion de portails.
+    Technologie destiné aux applications massives nécessitant une diffusion extrêmement rapide des patchs et mises à jour. 
+</p>
+
+<h3>POUR FINIR</h3>
+
+<p>
+    Les résultats ont été probants, puisque nous avons réussi à publier la nouvelle application une semaine avant la date limite fixée par Google.
+</p>
+
+<p>
+    Cette réalisation m'a aidé à avancer et à progresser dans ma carrière. J'ai pu me confronter à plusieurs problématiques liées au développement mobile et à Ionic.
+    Cela m'a également permis de consolider mes connaissances acquises lors de ma formation précédente avec le projet Suricate et de solidifier mes bases.
+</p>
+
+<p>
+    En ce qui concerne les marges de progression car aucune application n’est parfaite, certains éléments de pages sont actuellement codés de manière "statique" par manque de temps 
+    ils pourraient être encapsulés dans des composants ou services distincts afin d'améliorer la maintenabilité et la simplicité du code applicatif. 
+    Le développement mobile m'est maintenant pleinement accessible grâce à Ionic et je recompte bien participer à leur prochain Summit et continuer de m'inspirer de la communauté.
+</p>
+
+<p>
+    Dans l'ensemble, je suis très fier du travail que j'ai accompli, et la satisfaction du client ainsi que celle de mon supérieur sont pour moi les aspects les plus importants. 
+</p>
+
+<p>
+    Je tiens à exprimer ma sincère gratitude à Julien mon supérieur pour le temps qu'il a consacré à ce projet.
+    Son soutien et sa disponibilité ont été d'une importance capitale pour la réussite de cette réalisation. Encore une fois, merci. 
+</p>

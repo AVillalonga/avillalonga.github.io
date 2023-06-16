@@ -1,0 +1,87 @@
+<h1>Métronome au rythme des transports</h1>
+
+<p>
+    Les projets du cycle bachelor à l'Intech ont joué un rôle essentiel dans mon apprentissage en me permettant d'améliorer à la fois mes compétences techniques et humaines.
+    Au cours du quatrième semestre, l'objectif était de montrer notre maitrise de l’architecture 3 tier. 
+</p>
+
+<p>
+    Notre projet, Métronome, est une application web qui offre aux utilisateurs un accès au métro parisien grâce à une carte interactive,
+    ainsi que des informations en temps réel sur les déplacements des métros. Ce projet s'inspire d’<a href="https://watchdogs.fandom.com/fr/wiki/WeAreData">un des services</a> 
+    développés pour le jeu vidéo Watch Dogs développé par Ubisoft.
+    <i>WeAreData</i> (nom officiel) virtualisait en temps réels paris (ces métros, ces bus...) en exploitant toutes les données publiques disponible sur le net. 
+</p>
+
+<p>
+    L'objectif principal hors du scope imposé par notre groupe pédagogique était de permettre aux membres de
+    l'équipe de monter en compétence sur les principes fondamentaux des services de géolocalisation au et de cartographie. 
+</p>
+
+<h3>Les Enjeux</h3>
+
+<p>
+    Avant de commencer le développement, moi-même et le chef de projet avons réalisé une rétrospective pour évaluer
+    les différentes technologies et outils disponibles afin de réaliser au mieux cette application.
+    Cela nous a permis de prévoir les éventuels risques et coûts associés à un tel projet. 
+</p>
+
+<p>
+    Nous disposions de trois mois pour mener à bien ce projet. Nous avons donc décidé de diviser le travail en plusieurs étapes clés : 
+</p>
+
+<ol>
+    <li>Base de données et modèles de données, afin d'assurer une compréhension commune des interfaces et des contrats pour le formatage des données</li>
+    <li>Daemon/Worker : un programme en tâche de fond chargé de récupérer les informations nécessaires telles que les stations et leur statut via l'API publique <a href="https://navitia.io/">Navitia</a></li> 
+    <li>Application web avec Vue.js 3</li>
+    <li>Carte interactive (MapBox) : </li>
+    <ul>
+        <li>Affichage des arrêts de métro</li>
+        <li>Visualisation des métros en mouvement</li>
+        <li>Recherche de stations par nom ou adresse</li>
+    </ul>
+</ol>
+
+<h3>La compagnie des exilés</h3>
+
+<p>
+    Au départ, nous étions une équipe de quatre membres, mais au fil de l’avancement du projet certain membres se sont désistés car le projet ne leurs correspondait pas.
+    Rapidement nous sommes passés à trois, puis à deux personnes.
+</p>
+
+<p>
+    Suite à cela, nous avons travaillé en étroite collaboration avec le groupe pédagogique pour réorganiser nos fonctionnalités à court terme.
+    Cette réorganisation a notamment permis d'affiner les étapes clés et de les réaliser de manière plus efficace. 
+</p>
+
+<p>
+    Malgré le malentendu nous sommes parvenus à réaliser tous les objectifs principaux que nous nous étions fixés initialement à quatre membres.
+    Nous sommes fiers d'avoir encore une fois surmonté les difficultés rencontrées et nous en sommes sortis plus matures.
+    Nous avons même reçu les félicitations d'un de nos professeurs pour notre capacité d'adaptation. 
+</p>
+
+<h3>Vers l'infini et au delà</h3>
+
+<p>
+    Notre première version de Métronome était centrée sur le métro parisien, mais il serait intéressant d'adapter les cartes pour prendre en charge d'autres villes ou d'autres modes de transport,
+    tels que les bus ou les trains grandes lignes.
+</p>
+
+<p>
+    Notre projet a également été limité par le nombre d'entités simultanée acceptées par le Framework MapBox.
+    Un trop grand nombre d'entités chargées à l'écran entraînais des problèmes de performances pour les utilisateurs possédant des smartphones plus anciens.
+    Par conséquent, nous avons limité le nombre de lignes disponible lors de notre démonstration. 
+</p>
+
+<h3>Passer la 2nd</h3>
+
+<p>
+    Tout au long de ce projet, j'ai pu approfondir ma connaissance de Mapbox, Electron, Vue.js et ASP.NET, des compétences particulièrement recherchées dans notre domaine.
+    Le principale point d’amélioration aurait été d’accorder plus d’importance à la maîtrise des outils et Frameworks indispensable à l'élaboration du projet.
+    MapBox est un bon outil mais nous étions mal informés sur les problèmes que nous allions y rencontrer. 
+</p>
+
+<p>
+    Nous en sommes sortis plus fiers que jamais.
+    Je tiens à remercier particulièrement Yann Simajchel pour sa collaboration exceptionnelle et son engagement dans tous les projets que nous avons réalisés ensemble.
+    Sa contribution et sa personnalité ont été inestimable pour moi.
+</p>

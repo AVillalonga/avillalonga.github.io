@@ -1,0 +1,313 @@
+@import '../node_modules/@dread-pirate-roberts/design-system-atom/dist/latest/atom.css';
+
+body header.header .profile {
+    padding    : 0;
+    align-items: center;
+}
+
+body header.header .profile img.logo {
+    height      : var(--lg);
+    margin-right: var(--sm);
+    width       : auto;
+}
+
+body nav.navigation.main a,
+body nav.navigation.second a {
+    text-transform: capitalize;
+}
+
+body .container main.main {
+    height: calc(100vh - 48px);
+}
+
+body .container main.main > section {
+    height: auto;
+}
+
+body a {
+    cursor: pointer;
+}
+
+body nav.navigation.main a.expend {
+    width              : var(--md) !important;
+    height             : var(--md) !important;
+    background-image   : url('../../assets/burger-nav.png');
+    background-size    : 75%;
+    background-repeat  : no-repeat;
+    background-position: center center;
+}
+
+body nav.navigation.main a.expend:hover {
+    opacity: 0.5;
+}
+
+body nav.navigation.second a.active {
+    color      : var(--black);
+    border-left: 1px solid var(--black);
+}
+
+body nav.navigation.breadcrumb {
+    height: 16px;
+}
+
+footer div {
+    text-align: center;
+
+}
+
+body main.main>section>* {
+    animation      : 300ms showUp linear both;
+    animation-delay: 2100ms;
+}
+
+body main.main>section p {
+    line-height: var(--lh-p2);
+}
+
+body main.main>section.hide>* {
+    color: #00000000;
+}
+
+body main.main>section>*:nth-child(1) {
+    animation-delay: 100ms;
+}
+
+body main.main>section>*:nth-child(2) {
+    animation-delay: 200ms;
+}
+
+body main.main>section>*:nth-child(3) {
+    animation-delay: 300ms;
+}
+
+body main.main>section>*:nth-child(4) {
+    animation-delay: 400ms;
+}
+
+body main.main>section>*:nth-child(5) {
+    animation-delay: 500ms;
+}
+
+body main.main>section>*:nth-child(6) {
+    animation-delay: 600ms;
+}
+
+body main.main>section>*:nth-child(7) {
+    animation-delay: 700ms;
+}
+
+body main.main>section>*:nth-child(8) {
+    animation-delay: 800ms;
+}
+
+body main.main>section>*:nth-child(9) {
+    animation-delay: 1000ms;
+}
+
+body main.main>section>*:nth-child(10) {
+    animation-delay: 1100ms;
+}
+
+body main.main>section>*:nth-child(11) {
+    animation-delay: 1200ms;
+}
+
+body main.main>section>*:nth-child(12) {
+    animation-delay: 1300ms;
+}
+
+body main.main>section>*:nth-child(13) {
+    animation-delay: 1400ms;
+}
+
+body main.main>section>*:nth-child(14) {
+    animation-delay: 1500ms;
+}
+
+body main.main>section>*:nth-child(15) {
+    animation-delay: 1600ms;
+}
+
+body main.main>section>*:nth-child(16) {
+    animation-delay: 1700ms;
+}
+
+body main.main>section>*:nth-child(17) {
+    animation-delay: 1800ms;
+}
+
+body main.main>section>*:nth-child(18) {
+    animation-delay: 1900ms;
+}
+
+body main.main>section>*:nth-child(19) {
+    animation-delay: 2000ms;
+}
+
+body main.main>section>*:nth-child(20) {
+    animation-delay: 2100ms;
+}
+
+body main.main>section quote {
+    display         : inline-block;
+    background-color: var(--grey-200);
+    padding         : var(--xxsm) var(--xsm);
+    margin          : var(--xsm) 0;
+    border-radius   : 3px;
+}
+
+body main.main>section img {
+    display  : block;
+    padding  : var(--xsm);
+    border   : 1px solid var(--grey-300);
+    max-width: calc(512px - 2 * var(--xsm));
+}
+
+body main.main>section img.diapo {
+    display: inline-block;
+    border : 0;
+    height : 256px;
+}
+
+body main.main>section table img {
+    padding: 0;
+    border: 0;
+    width: var(--lg);
+}
+
+body main.main>section .icon {
+    display         : inline-block;
+    width           : 32px;
+    height          : 32px;
+    margin          : var(--xsm);
+    background-color: var(--grey-400);
+}
+
+body main.main>section .ico {
+    float: left;
+    border: 0;
+    padding: 0;
+    height: var(--fs-p3);
+    margin-top: var(--xxsm);
+    margin-right: var(--xxsm);
+    vertical-align: middle;
+}
+
+body main.main>section * {
+    max-width: 70%;
+}
+
+body main.main>section form {
+    row-gap: var(--sm);
+}
+
+body main.main>section form label {
+    min-width : var(--xhuge);
+    text-align: right;
+}
+
+body main.main>section form input {
+    width: 100%;
+}
+
+body main.main>section a {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+body main.main>section h1,
+body main.main>section h2,
+body main.main>section h3 {
+    margin: var(--sm) 0;
+}
+
+body .loader {
+    position        : fixed;
+    align-items     : center;
+    text-align      : center;
+    top             : 0;
+    bottom          : 0;
+    left            : 0;
+    right           : 0;
+    background-color: var(--grey-900);
+    z-index         : 1000;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    transition      : 1000ms;
+}
+
+body .loader h3 {
+    animation: showUp 1000ms infinite linear alternate;
+    color    : var(--grey-50);
+}
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+footer p {
+    margin: 0;
+}
+
+footer img {
+    height: 64px;
+}
+
+@media only screen and (max-width: 768px) {
+    body main.main>section img {
+        max-width: 256px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    body nav.navigation.main.open {
+        flex-direction: column;
+        width         : 100%;
+        padding       : 0;
+        row-gap       : 0;
+    }
+
+    body nav.navigation.main.open a {
+        padding: var(--sm);
+        display: block;
+    }
+
+    body nav.navigation.main a.expend {
+        display: block;
+    }
+
+    body nav.navigation.main.open a:nth-child(2n+1) {
+        background-color: var(--grey-50);
+    }
+
+    body nav.navigation.main.open a.expend {
+        background-image: url('../../assets/cross-nav.png');
+        position        : absolute;
+        top             : var(--sm);
+        right           : var(--sm);
+        background-size : 100%;
+        padding         : 0;
+        background-color: white;
+        border          : 1px solid var(--black-200);
+        z-index         : 100 !important;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    body nav.navigation.main a.expend {
+        display: none !important;
+    }
+}
+
+body meter {
+    border: 1px solid var(--grey-600);
+}
+
