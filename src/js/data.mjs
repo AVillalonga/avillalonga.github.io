@@ -41,7 +41,7 @@ let data = {
             label: 'compétences techniques',
             html: '../static/techskills.html',
             data: [{
-                    id: '',
+                    id: 'Maîtriser son environnement',
                     html: '../static/techskills/0.html'
                 },
                 {

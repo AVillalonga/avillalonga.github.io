@@ -161,6 +161,7 @@ body main.main>section img {
     padding  : var(--xsm);
     border   : 1px solid var(--grey-300);
     max-width: calc(512px - 2 * var(--xsm));
+    max-height: 256px;
 }
 
 body main.main>section img.diapo {
@@ -263,6 +264,7 @@ footer img {
 @media only screen and (max-width: 768px) {
     body main.main>section img {
         max-width: 256px;
+        max-height: 128px;
     }
 }
 
