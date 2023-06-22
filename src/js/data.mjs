@@ -45,7 +45,7 @@ let data = {
                     html: '../static/techskills/0.html'
                 },
                 {
-                    id: '',
+                    id: 'L\'art de la Refactorisation',
                     html: '../static/techskills/1.html'
                 },
                 {

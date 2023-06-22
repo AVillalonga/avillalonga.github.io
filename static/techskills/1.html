@@ -1,0 +1,105 @@
+<h1>L'Art de la Refactorisation</h1>
+
+<p>
+    Le paysage des applications informatiques a considérablement évolué au cours des dernières décennies, entraînant une diminution drastique de leur durée de vie moyenne.
+    Alors qu'il fut un temps où les projets étaient conçus pour durer de 20 à 40 ans; maintenant la majorité des applications ne survivent pas plus de 5 ans. 
+</p>
+
+<p>
+    Cette réduction de la durée de vie des applications peut être attribuée à la multiplication des langages, des techniques et des frameworks qui ont suivi l'évolution du numérique depuis les années 90.
+    De nos jours, la plupart des projets sont réalisés ou finalisés dans la précipitation. Les applications nécessitent des mises à niveau régulières pour éviter les failles de sécurité,
+    mais il arrive souvent que le code existant ne permette pas les évolutions nécessaires pour assurer une maintenance appropriée. 
+</p>
+
+<p>
+    Dans de tels cas, deux solutions se présentent généralement :
+</p>
+
+<ul>
+    <li style="color: var(--red);">
+        Continuer avec le code existant en effectuant des “bidouillages”,
+        mais le manque de maitrise du code source peut venir à compromettre l'intégrité des données des clients, voire du fonctionnement l'application elle-même. 
+    </li>
+    <li style="color: var(--green);">
+        Refaire l'application ou les parties problématiques en prévoyant un support à long terme dès le début de la réflexion. 
+    </li>
+</ul>
+
+<h3>Profile “refacteur”</h3>
+
+<p>
+    Il s'agit d’une personne capable de faire perdurer les projets en repartant du code initial, une personne compétente pourra faire économiser beaucoup d'argent sur la vie totale de l'application.
+    Le plus souvent la refactorisation dépendra entièrement du client, qui sera prêt ou non à y investir le budget nécessaire.
+</p>
+
+<p>
+    La refactorisation de code est une compétence essentielle pour mon rôle au sein de l'équipe <a target="_blank" href="https://www.ipi-ecoles.com/tma/">TMA</a>.
+    Elle demande au développeur de comprendre le code source, ce qui peut être une tâche complexe, et nécessite un certain niveau d'autonomie et de savoir-faire. 
+</p>
+
+<p>
+    Il existe de nombreux ouvrages et ressources sur le sujet de la refactorisation de code, tels que les directives (nommées plus communément des “guidelines”)
+    fournies par de grandes entreprises comme Google et Facebook (ex: Style Guide Google JS https://google.github.io/styleguide/jsguide.html).
+    Ces ressources peuvent servir de guide et permettre aux développeurs de se former et d'améliorer leurs compétences en refactorisation sans avoir à re-effectuer ce travail titanesque d'organiser le code applicatif. 
+</p>
+
+<h3>En situation</h3>
+
+<p>
+    Permettez-moi de partager une anecdote personnelle qui illustre l'application pratique de cette compétence.
+    J'ai récemment été contacté par un client pour résoudre un bug concernant l'ordre d'affichage des parkings sur le site Interparking.
+    Certains parkings manquaient parfois à l'affichage, et le temps de calcul était incohérent par rapport aux distances à parcourir dans des cas très spécifiques.
+    Pour résoudre ce problème, j'ai dû examiner plus de 3000 lignes de code.
+</p>
+
+<p>
+    Au cours de mes tests de débogage, je n'ai pas réussi à identifier directement la source du problème, mais j'ai rapidement réalisé que le code pouvait être considérablement amélioré.
+    Il manquait de documentation, les fonctions n'étaient pas atomiques/pures, les paramètres des fonctions étaient énormes, les espaces de noms et les noms de variables étaient incohérents,
+    et il existait des possibilités d'optimisation des performances plus globalement.
+</p>
+
+<p>
+    Après avoir refactorisé le code, j'ai réussi à le réduire de moitié le nombre de lignes, tout en y ajoutant de la documentation.
+    J'ai également amélioré le temps de réponse des requêtes HTTP, le réduisant de deux secondes et demie à moins d'une seconde. 
+</p>
+
+<p>
+    Ce travail m’a aussi permis d’identifier la source du problème. L'ancien développeur utilisait une liste imbriquée pour stocker et traiter les informations des différents parkings.
+    Cependant, les propriétés imbriquées de cet objet étaient copiées lors de la duplication de l'instance parente. 
+</p>
+
+<p>
+    En d'autres termes, si un parking était exclu de la liste lors d'un des traitements, il était également exclu des traitements ultérieurs,
+    ce qui expliquait pourquoi certains parkings manquaient. 
+</p>
+
+<p>
+    Puis j'ai examiné de plus près les données des parkings, plusieurs d'entre eux avaient de mauvaises coordonnées de géolocalisation (d'une ou plusieurs rues),
+    ce qui expliquais le problème sur les temps des trajets. 
+</p>
+
+<h3>Enfin</h3>
+
+<p>
+    Il est important de noter que la compétence en refactorisation de code n'est pas applicable dans toutes les situations.
+    Elle est particulièrement utile lorsqu'il s'agit de reprendre le code illisible, trop complexe ou sans documentation. 
+</p>
+
+<p>
+    En tant que perfectionniste, j'apprécie particulièrement cette compétence étant donné le nombre de projets que j'ai à gérer.
+    J'ai développé cette compétence au fil du temps, en reprenant mon propre code à maintes reprises depuis mon plus jeune âge.
+    Cela m'a permis de découvrir des modèles, design pattern et des pratiques qui me conviennent.
+    J'adore essayer de nouvelles approches, et la refactorisation est un excellent moyen de mettre en pratique de nouvelles compétences et bonnes pratiques. 
+</p>
+
+<p>
+    En somme, la refactorisation de code est une compétence technique précieuse pour les développeurs,
+    il est essentiel de ne pas réinventer la roue à chaque fois, mais plutôt de le faire lorsque cela s'avère réellement nécessaire, afin de gagner du temps,
+    d'améliorer l'efficacité et de favoriser un développement efficient.  
+</p>
+
+<p>
+    Il est crucial de rester vigilants à toutes les étapes du développement d'une application. Que ce soit lors de la conception initiale, de l'écriture du code,
+    de la refactorisation ou de la maintenance continue, la vigilance est la clé pour éviter les erreurs coûteuses et les problèmes futurs.
+    Alors, restons attentifs et soucieux de la qualité à chaque instant, afin de créer des applications robustes et fiables pour répondre aux besoins de nos utilisateurs.
+</p>
