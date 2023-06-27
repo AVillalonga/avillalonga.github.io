@@ -1,17 +1,82 @@
-Le développement informatique éco-responsable : une nécessité pour un avenir durable
+<h1>Le développement informatique éco-responsable : une nécessité pour un avenir durable</h1>
 
-Le développement informatique est souvent associé à une empreinte écologique importante, en raison des ressources nécessaires pour faire fonctionner les machines, les serveurs et les infrastructures de communication. Cependant, en tant que développeurs, nous avons le pouvoir de réduire cet impact et de contribuer à un environnement plus propre grâce à diverses techniques. Dans cet article, nous explorerons les possibilités du développement informatique éco-responsable et son importance croissante dans notre société.
+<p>
+    Le développement informatique est souvent associé à une empreinte écologique importante, en raison des ressources nécessaires pour faire fonctionner les machines,
+    les serveurs et les infrastructures de communication. En tant que développeurs, nous avons le pouvoir de réduire cet impact et de contribuer à un environnement moins énergivore.
+    Dans cet article, nous explorerons les possibilités du développement informatique éco-responsable. 
+</p>
 
-Au sein des entreprises, la prise de conscience environnementale reste encore limitée. Cependant, si les entreprises comprenaient que l'éco-responsabilité va de pair avec l'optimisation des applications et la réduction des coûts de fonctionnement, elles pourraient changer leur perspective. Certaines activités, comme la fourniture de services de streaming vidéo, présentent des défis particuliers en matière de réduction de l'empreinte carbone, mais dans de nombreux autres domaines, des mesures peuvent être prises.
+<p>
+    Au sein des entreprises, la prise de conscience environnementale reste encore limitée.
+    Cependant, si les entreprises comprenaient que l'éco-responsabilité va de pair avec l'optimisation des applications et la réduction des coûts de fonctionnement,
+    elles pourraient changer leur perspective. Certaines activités, comme la fourniture de services de streaming vidéo, présentent des défis particuliers en matière de réduction de l'empreinte carbone ;
+    mais dans de nombreux autres domaines du numériques des mesures peuvent être prises.
+</p>
 
-Une anecdote illustrant cette réalité concerne mon expérience avec l'application Faciliteo, utilisée pour gérer les finances de plusieurs restaurateurs. Lors de mon travail sur cette application, j'ai constaté un nombre excessif de requêtes lors du chargement de certaines pages. Une analyse plus approfondie a révélé que l'application recevait plus d'informations qu'elle n'en avait réellement besoin pour fonctionner. J'ai donc procédé à une optimisation en supprimant le code superflu. Cela a réduit le temps de chargement global de l'application et la consommation de mémoire chez l'utilisateur, améliorant ainsi son efficacité tout en réduisant son impact environnemental.
+<quote>
+    <a target="_blank" href="https://theshiftproject.org/wp-content/uploads/2019/07/R%C3%A9sum%C3%A9-aux-d%C3%A9cideurs_FR_Linsoutenable-usage-de-la-vid%C3%A9o-en-ligne.pdf">L’insoutenable usage de la vidéo en ligne</a> – The shift project
+</quote>
 
-Outre l'optimisation du code, il existe d'autres pratiques permettant de développer de manière éco-responsable. Par exemple, l'optimisation des images et autres contenus statiques peut réduire la bande passante nécessaire pour les afficher. La mise en place de "buckets" de requêtes permet de limiter le nombre de requêtes qu'un utilisateur peut effectuer par seconde, évitant ainsi les abus ou les attaques DDoS tout en maintenant une expérience utilisateur fluide.
+<h3>Mes bonnes pratiques</h3>
 
-Cependant, il est important de souligner que la compétence en développement éco-responsable n'est pas universellement acquise. Elle nécessite une réflexion approfondie sur les modèles et types de données utilisés, ainsi que sur l'architecture et les communications mises en place. Cette compétence doit être intégrée à notre profil d'expert en ingénierie informatique, et nous devons prendre la responsabilité de sensibiliser les entreprises et la société à son importance.
+<p>
+    Voici un exemple de cette réalité au quotidien de mon travail de support applicatif avec Faciliteo 
+    une application web (Express.Js & Vue.Js) utilisée pour gérer les finances de plusieurs restaurateurs.
+</p>
 
-Dans un monde où l'énergie et les ressources sont limitées, il devient essentiel de repenser nos habitudes en matière de développement informatique. Les vidéos en haute résolution, par exemple, ne sont souvent pas nécessaires pour la majorité des cas d'utilisation, et des alternatives moins énergivores, comme la résolution 720p, peuvent être privilégiées. De même, privilégier les messages écrits plutôt que les messages vocaux peut réduire considérablement la consommation d'énergie. Il est également important de développer des heuristiques efficaces afin de minimiser les interactions nécessaires tout en préservant une expérience utilisateur de qualité.
+<p>
+    J'ai remarqué un nombre excessif de requêtes lors du chargement de certaines pages.
+    Une analyse plus approfondie a révélé que l'application recevait beaucoup plus d'informations qu'elle n'en avait réellement besoin pour fonctionner.
+    Les modèles de données contenu dans les requêtes HTTP envoyés était “brut”.
+</p>
 
-Pour développer cette compétence, il est essentiel de prendre le temps de comprendre l'ampleur de nos actions en tant que développeurs. Cela nécessite également de rester à jour avec les avancées technologiques et scientifiques, en effectuant une veille régulière.
+<p>
+    J'ai donc procédé à une optimisation en formattant les requêtes au travers d’“<a target="_blank" href="https://fr.wikipedia.org/wiki/Objet_de_transfert_de_donn%C3%A9es">Objets de transfert de données</a>” (DTO)
+    supprimant les valeurs inutilisées des modèles originaux puis en réadaptant certaines requêtes vers le “<a target="_blank" href="https://fr.wikipedia.org/wiki/Mapping_objet-relationnel">Mapping objet-relationnel</a>" (ORM).
+    Cela a réduit le temps de chargement des dites pages de l'application et la consommation de mémoire chez l'utilisateur,
+    améliorant ainsi son efficacité tout en réduisant un peu plus son impact environnemental.
+</p>
 
-En conclusion, le développement informatique éco-responsable est une compétence essentielle pour garantir un avenir durable. Bien qu'elle puisse rencontrer des résistances dans certaines entreprises, il est important de rester convaincu que le coût énergétique des infrastructures informatiques deviendra de plus en plus un luxe. En tant que développeurs, nous avons la capacité de faire évoluer cette compétence en comprenant mieux nos machines et en minimisant leur impact sans que les utilisateurs ne s'en rendent compte. Ainsi, nous pouvons nous démarquer en tant que professionnels engagés dans la préservation de l'environnement tout en développant des solutions informatiques efficaces.
+<p>
+    Outre l’”atomisation” du code, il existe d'autres pratiques permettant de développer de manière éco-responsable.
+    Par exemple, la compression ou la redimension des contenus statiques (images, vidéos...) va permettre de réduire la bande passante nécessaire pour les afficher.
+    Car chaque morceau non essentiel d’information est à retirer du calcule de vos machines et celle des autres.<br/>
+    Ou encore la mise en place d’un "Token ou Leaky bucket" https://ipinfo.io/blog/how-to-create-a-simple-rate-limiter-in-node-js/ afin de limiter par exemple le nombre de requêtes qu'un utilisateur
+    peut effectuer par seconde, évitant ainsi les abus d'usage et prévenir un potentiel déni de service (DDoS) tout en maintenant une expérience utilisateur fluide. 
+</p>
+
+<p>
+    Pour ceux qui voudrais développer cette compétence, il est essentiel de prendre le temps de comprendre l'ampleur de vos actions en tant que développeurs en
+    domestiquant toujours mieux nos machines, votre code et leurs impacts. Cela nécessite également de rester à jour sur les avancées technologiques et les actualités numériques. 
+</p>
+
+<h3>Sans limites d'intelligence, d'imagination et d'émerveillement</h3>
+
+<p>
+    Cependant, il est important de souligner que le “développement éco-responsable” n'est pas universellement acquis.
+    Elle nécessite une réflexion approfondie sur les modèles et types de données utilisés, ainsi que sur l'architecture et les communications mises en place.
+</p>
+
+<quote>
+    “<i>It doesn't make sense to hire smart people and tell them what to do; we hire smart people so they can tell us what to do.</i>” - Steve Jobs
+    <br/>
+    Traduction  : “<i>Cela n'a pas de sens d'engager des personnes intelligentes et de leur dire quoi faire ; nous engageons des personnes intelligentes pour qu'elles nous disent quoi faire.</i>” - Steve Jobs 
+</quote>
+
+<p>
+    C’est pour cela que nous devons prendre la responsabilité de sensibiliser nos entreprises ! 
+</p>
+
+<p>
+    Dans un monde où l'énergie et les ressources sont limitées, il devient essentiel de repenser nos habitudes en matière de développement informatique.
+    Les vidéos en haute résolution n'est souvent pas une nécessité pour la majorité des usages, et des alternatives moins énergivores, devrait-être privilégiées.
+    Il est également important de développer des heuristiques afin de minimiser les interactions nécessaires tout en préservant une expérience utilisateur de qualité. 
+</p>
+
+<p>
+    Pour finir, le développement informatique éco-responsable est une compétence essentielle pour garantir un avenir un peu plus durable.
+    Bien qu'elle puisse rencontrer des résistances dans certaines entreprises, il est important garder en mémoire que le coût énergétique des
+    infrastructures informatiques deviendra de plus en plus un luxe au fil des années.
+    Ainsi, nous pouvons aussi nous démarquer maintenant en tant que professionnels engagés pour l’égalité de l’accès à internet et dans la préservation de
+    l'environnement tout en développant des solutions informatiques efficaces.
+</p>

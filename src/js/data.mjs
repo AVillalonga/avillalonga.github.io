@@ -49,7 +49,7 @@ let data = {
                     html: '../static/techskills/1.html'
                 },
                 {
-                    id: '',
+                    id: 'Développement éco-responsable',
                     html: '../static/techskills/2.html'
                 }
             ]
